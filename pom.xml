@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.darius.lzz</groupId>
+    <artifactId>darius</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <ai-ailab-facade.version>0.0.1-SNAPSHOT</ai-ailab-facade.version>
+        <!--<maven.deploy.skip>true</maven.deploy.skip>-->
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.1.2.RELEASE</spring-boot.version>
+        <springfox-swagger2.version>2.2.2</springfox-swagger2.version>
+        <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
+        <!--日志收集包-->
+        <fcbox-tibet-analyticssdk.version>1.3.1-SNAPSHOT</fcbox-tibet-analyticssdk.version>
+
+        <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
+        <mybatis-plus.version>2.1.7</mybatis-plus.version>
+        <mysql.connector.version>8.0.13</mysql.connector.version>
+        <mybatis-generator-core.version>1.3.7</mybatis-generator-core.version>
+        <mybatis-generator-plugin.version>1.2.20</mybatis-generator-plugin.version>
+        <pagehelper.version>5.1.2</pagehelper.version>
+        <commons-lang3.version>3.6</commons-lang3.version>
+        <guava.version>16.0.1</guava.version>
+        <druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
+
+        <spring-boot-starter-disconf.version>2.0.0</spring-boot-starter-disconf.version>
+        <zookeeper.version>3.4.9</zookeeper.version>
+        <fastjson.version>1.2.70</fastjson.version>
+
+        <jackson.version>2.9.6</jackson.version>
+
+        <okhttp.version>4.0.0-alpha01</okhttp.version>
+        <okio.version>2.2.2</okio.version>
+        <httpclient.version>4.5</httpclient.version>
+        <httpcore.version>4.4.4</httpcore.version>
+        <httpmime.version>4.5</httpmime.version>
+        <spring-boot-starter-dubbo.version>2.0.0-SNAPSHOT</spring-boot-starter-dubbo.version>
+        <dubbo.version>2.6.3</dubbo.version>
+        <sso.version>2.0.7beedance-SNAPSHOT</sso.version>
+        <fcbox-uic-facade.version>2.2.0-SNAPSHOT</fcbox-uic-facade.version>
+        <commons-io.version>2.4</commons-io.version>
+        <logback-classic.version>1.2.3</logback-classic.version>
+        <kafka-clients.version>0.11.0.0</kafka-clients.version>
+        <kafka-streams.version>0.11.0.0</kafka-streams.version>
+        <spring-boot-starter-elastic-job.version>0.0.5-beedance-SNAPSHOT</spring-boot-starter-elastic-job.version>
+        <fcbox.common.service.api.version>0.0.1-SNAPSHOT</fcbox.common.service.api.version>
+        <grpc.version>1.11.0</grpc.version>
+        <tensorflow.client.version>0.0.1-SNAPSHOT</tensorflow.client.version>
+        <poi-ooxml.version>3.9</poi-ooxml.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <!--配置私服工厂 -->
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <url>http://nexus.fcbox.com/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <url>http://nexus.fcbox.com/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <!-- 配置发布文件到私服 -->
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Nexus Release Repository</name>
+            <url>http://nexus.fcbox.com/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://nexus.fcbox.com/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
